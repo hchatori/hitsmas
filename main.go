@@ -282,16 +282,6 @@ func main() {
 		break
 	}
 
-	// Create a file for each player. Then, randomly select an
-	// outfit and weapon for each target and a wild card. Write the selections
-	// to the file. NOTE: All picked options are removed for other players.
-
-	rand.Seed(time.Now().UnixNano())
-
-	currOutfits := outfits[d]
-	currWeapons := weapons[d]
-	currWildCards := wildCards[d]
-
 	// Clean any existing outputs.
 	err = cleanOutputDir()
 	if err != nil {
@@ -305,6 +295,14 @@ func main() {
 		return
 	}
 
+	// Randomly select an outfit and weapon for each target and a wild card.
+	// Create a file for each player, and write the selections to the file.
+	// NOTE: All picked options are removed for other players.
+	rand.Seed(time.Now().UnixNano())
+
+	currOutfits := outfits[d]
+	currWeapons := weapons[d]
+	currWildCards := wildCards[d]
 	for _, pp := range players {
 		data := fmt.Sprintf("Destination: %s\n\n", d)
 		for _, tt := range targets[d] {
