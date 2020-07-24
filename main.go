@@ -151,7 +151,11 @@ var wildCards = map[string][]string{
 		"Drop a speaker.",
 		"Drop a chandelier.",
 		"Throw an explosive in the catwalk room.",
-		"TODO",
+		"Set off the fireworks.",
+		"Create a Bare Knuckle Boxer (poisonous cocktail).",
+		"Find an IAGO invitation.",
+		"Escape through the basement",
+		"Knock someone out with a piano.",
 	},
 
 	"Bangkok": {
@@ -163,7 +167,13 @@ var wildCards = map[string][]string{
 		"Replace one outfit with one of your choosing.",
 		"Replace one weapon with one of your choosing.",
 
-		"TODO",
+		"Find and play a guitar.",
+		"Collect 6 coconuts.",
+		"Find and destroy an elephant statue.",
+		"Find and repair the tuk-tuk.",
+		"Call room service from your suite.",
+		"Escape through the tunnel.",
+		"Pollute the ventilation system.",
 	},
 
 	"Miami": {
@@ -182,6 +192,7 @@ var wildCards = map[string][]string{
 		"Find a didgeridoo.",
 		"Thwack a Thwack Mechanic.",
 		"Steal coins from the street musician.",
+		"Find a fish trophy.",
 	},
 
 	"Isle of Sgàil": {
@@ -193,7 +204,13 @@ var wildCards = map[string][]string{
 		"Replace one outfit with one of your choosing.",
 		"Replace one weapon with one of your choosing.",
 
-		"TODO",
+		"Exit mission via swan dive.",
+		"Kill the Constant by triggering the kill switch.",
+		"Take out an NPC with a filigree egg.",
+		"Collect 10 commemorative tokens.",
+		"Fire the cannon.",
+		"Knock out three people with a fish.",
+		"Poison the Constant.",
 	},
 
 	"New York": {
@@ -205,7 +222,11 @@ var wildCards = map[string][]string{
 		"Replace one outfit with one of your choosing.",
 		"Replace one weapon with one of your choosing.",
 
-		"TODO",
+		"Obtain a janitor's key.",
+		"Escape in the armored car found in the basement.",
+		"Knock out three NPCs with a goldbar.",
+		"Find and explode the letterbomb parcel.",
+		"Throw a cheeseburger at someone.",
 	},
 }
 
