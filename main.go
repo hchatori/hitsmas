@@ -13,11 +13,10 @@ import (
 
 var outputDir string
 
-var destinations = []string{"Paris", "Bangkok", "Miami", "Isle of Sgàil", "New York"}
+var destinations = []string{"Paris", "Miami", "Isle of Sgàil", "New York"}
 
 var targets = map[string][]string{
 	"Paris":         {"Viktor Novikov", "Dalia Margolis"},
-	"Bangkok":       {"Jordan Cross", "Ken Morgan"},
 	"Miami":         {"Robert Knox", "Sierra Knox"},
 	"Isle of Sgàil": {"Zoe Washington", "Sophia Washington"},
 	"New York":      {"Athena Savalas"},
@@ -29,47 +28,32 @@ var outfits = map[string][]string{
 		"Helmut Kruger",
 		"Sheikh",
 		"Auction Staff",
-		"Palace Staff",
-		"Security Guard",
 		"Stylist",
 		"Tech Crew",
 		"Vampire Magician",
-	},
-
-	"Bangkok": {
-		"Exterminator",
-		"Hotel Security",
-		"Hotel Staff",
-		"Kitchen Staff",
-		"Jordan Cross' Bodyguard",
-		"Morgan's Bodyguard",
-		"Waiter",
 	},
 
 	"Miami": {
 		"Mascot",
 		"Florida Man",
 		"Medic",
-		"Event Security",
 		"Food Vendor",
-		"Kitchen Staff",
 		"Kronstadt Engineer",
-		"Kronstadt Mechanic",
 		"Ted Mendez",
 		"Race Marshal",
+		"Street Musician",
+		"Pale Rider",
 	},
 
 	"Isle of Sgàil": {
 		"Architect",
 		"Ark Member",
-		"Castle Staff",
 		"Chef",
-		"Guard",
 		"Entertainer",
 		"Initiate",
 		"Jebediah Block",
-		"Knight's Armour",
-		"Raider",
+		"Burial Robes",
+		"Master of Ceremonies",
 	},
 
 	"New York": {
@@ -86,55 +70,45 @@ var outfits = map[string][]string{
 
 var weapons = map[string][]string{
 	"Paris": {
-		"Gun",
 		"Fire Axe",
 		"Kitchen Knife",
 		"Saber",
 		"Hatchet",
-		"Fire Extinguisher",
-	},
-
-	"Bangkok": {
-		"Gun",
-		"Hatchet",
-		"Katana",
+		"Lethal Poison",
+		"Scissors",
+		"Bare hands (snap neck)",
 		"Letter Opener",
-		"Sapper's Axe",
-		"Cleaver",
-		"Fire Extinguisher",
 	},
 
 	"Miami": {
-		"Gun",
 		"Starfish",
 		"Battle Axe",
 		"Amputation Knife",
 		"Fire Axe",
 		"Kitchen Knife",
-		"Fire Extinguisher",
+		"Lethal Pills",
+		"Modern Lethal Syringe",
+		"Old Axe",
+		"Scissors",
 	},
 
 	"Isle of Sgàil": {
-		"Gun",
 		"Battle Axe",
-		"Burial Dagger",
-		"Circumcision Knife",
-		"Katana",
 		"Saber",
 		"Scalpel",
 		"Viking Axe",
-		"Fire Extinguisher",
+		"Cleaver",
+		"Hatchet",
 	},
 
 	"New York": {
-		"Gun",
 		"Antique Curved Knife",
+		"Burial Dagger",
 		"Fire Axe",
 		"Folding Knife",
 		"Letter Opener",
 		"Scissors",
 		"Hobby Knife",
-		"Fire Extinguisher",
 	},
 }
 
@@ -143,7 +117,6 @@ var wildCards = map[string][]string{
 		"Choose the starting location.",
 		"Finish with 'No Recordings'.",
 		"Finish with 'No Bodies Found'.",
-		"Start with no coins.",
 		"Pull a fire alarm.",
 		"Replace one outfit with one of your choosing.",
 		"Replace one weapon with one of your choosing.",
@@ -153,34 +126,14 @@ var wildCards = map[string][]string{
 		"Throw an explosive in the catwalk room.",
 		"Set off the fireworks.",
 		"Create a Bare Knuckle Boxer (poisonous cocktail).",
-		"Find an IAGO invitation.",
-		"Escape through the basement",
+		"Escape through the basement.",
 		"Knock someone out with a piano.",
-	},
-
-	"Bangkok": {
-		"Choose the starting location.",
-		"Finish with 'No Recordings'.",
-		"Finish with 'No Bodies Found'.",
-		"Start with no coins.",
-		"Pull a fire alarm.",
-		"Replace one outfit with one of your choosing.",
-		"Replace one weapon with one of your choosing.",
-
-		"Find and play a guitar.",
-		"Collect 6 coconuts.",
-		"Find and destroy an elephant statue.",
-		"Find and repair the tuk-tuk.",
-		"Call room service from your suite.",
-		"Escape through the tunnel.",
-		"Pollute the ventilation system.",
 	},
 
 	"Miami": {
 		"Choose the starting location.",
 		"Finish with 'No Recordings'.",
 		"Finish with 'No Bodies Found'.",
-		"Start with no coins.",
 		"Pull a fire alarm.",
 		"Replace one outfit with one of your choosing.",
 		"Replace one weapon with one of your choosing.",
@@ -199,13 +152,10 @@ var wildCards = map[string][]string{
 		"Choose the starting location.",
 		"Finish with 'No Recordings'.",
 		"Finish with 'No Bodies Found'.",
-		"Start with no coins.",
 		"Pull a fire alarm.",
 		"Replace one outfit with one of your choosing.",
 		"Replace one weapon with one of your choosing.",
 
-		"Exit mission via swan dive.",
-		"Kill the Constant by triggering the kill switch.",
 		"Take out an NPC with a filigree egg.",
 		"Collect 10 commemorative tokens.",
 		"Fire the cannon.",
@@ -217,7 +167,6 @@ var wildCards = map[string][]string{
 		"Choose the starting location.",
 		"Finish with 'No Recordings'.",
 		"Finish with 'No Bodies Found'.",
-		"Start with no coins.",
 		"Pull a fire alarm.",
 		"Replace one outfit with one of your choosing.",
 		"Replace one weapon with one of your choosing.",
